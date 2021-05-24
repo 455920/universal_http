@@ -16,7 +16,7 @@ class CreateDbTb:
     status INT(8) NOT NULL,
     UNIQUE(number)'''
     TB_TEST = "test"
-    TB_USER_PARAMS = '''id INT(8)'''
+    TB_TEST_PARAMS = '''id INT(8)'''
 
     DROP_DB = "DROP DATABASE %s" % DB_NAME
     CREATE_DB = "CREATE DATABASE IF NOT EXISTS %s;" % DB_NAME
@@ -24,7 +24,7 @@ class CreateDbTb:
     CREATE_TB_TEMPLATE = "CREATE TABLE IF NOT EXISTS %s(%s);"
 
     CREATE_USER_TB = CREATE_TB_TEMPLATE % (TB_USER, TB_USER_PARAMS)
-    CREATE_TEST_TB = CREATE_TB_TEMPLATE % (TB_TEST, TB_USER_PARAMS)
+    CREATE_TEST_TB = CREATE_TB_TEMPLATE % (TB_TEST, TB_TEST_PARAMS)
 
 
 if __name__ == "__main__":

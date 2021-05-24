@@ -29,6 +29,7 @@ class MysqlDao:
         logging.info("close db %s", self.host_)
 
     def execute(self, cmd):
+        print(cmd)
         if self.connect_ is None:
             self.connect_db()
         cur = self.connect_.cursor()
@@ -36,6 +37,7 @@ class MysqlDao:
         cur.close()
 
     def update(self, cmd):
+        print(cmd)
         if self.connect_ is None:
             self.connect_db()
         cur = self.connect_.cursor()
@@ -51,6 +53,7 @@ class MysqlDao:
         return res_data
 
     def query(self, cmd):
+        print(cmd)
         if self.connect_ is None:
             self.connect_db()
         cur = self.connect_.cursor()
@@ -60,6 +63,7 @@ class MysqlDao:
         return res_data
 
     def insert(self, cmd):
+        print(cmd)
         if self.connect_ is None:
             self.connect_db()
         cur = self.connect_.cursor()

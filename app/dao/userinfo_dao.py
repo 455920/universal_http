@@ -29,10 +29,10 @@ class UserInfoDao(MysqlDao):
         sql = " SELECT uid,name,password,number,modify_time,create_time,status FROM %s WHERE %s LIMIT %s " % (
             self.get_table_name(), condition, limit)
         res_data = super().query(sql)
-        res_len = len(res_data)
-        if res_len != 1:
-            logging.error("query row not 1")
-            raise Exception(AppError.ROW_NOT_ONE)
+        # res_len = len(res_data)
+        # if res_len != limit:
+        #     logging.error("query row not 1")
+        #     raise Exception(AppError.ROW_NOT_ONE)
 
         res_list = []
 
