@@ -7,13 +7,12 @@ from app.main import main_blue_print
 from app.user import user_blue_print
 from app.file import file_blue_print
 from app.conf.global_config import g_conf
+from app.comm.logger import logger
 
 
 def create_http_app():
+    logger.info("create_http_app")
     # 初始化日志
-    logging.basicConfig(filename=g_conf["log"]["log_path"], level=logging.DEBUG,
-                        filemode='w', format='%(levelname)s:%(asctime)s:%(message)s', datefmt='%Y-%d-%m %H:%M:%S')
-
     http_app = Flask(__name__)
 
     http_app.register_blueprint(main_blue_print)

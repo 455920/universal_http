@@ -1,0 +1,2 @@
+class GlobalManager:
+    pass

@@ -6,6 +6,6 @@ g_conf = {
         "password": "123456"
     },
     "log": {
-        "log_path": "./"
+        "log_path": "./universal_http.log"
     }
 }
