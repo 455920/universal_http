@@ -7,5 +7,9 @@ g_conf = {
     },
     "log": {
         "log_path": "./universal_http.log"
+    },
+    "server": {
+        "host": "127.0.0.1",
+        "port": 9999
     }
 }
